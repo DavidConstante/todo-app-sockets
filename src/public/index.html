@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Sockets Crud</title>
+
+</head>
+
+<body>
+
+
+
+    <div class="flex flex-col items-center justify-center">
+        <h1 class="m-4 text-3xl font-bold">Sockets Crud - Todo App</h1>
+
+        <div class="flex flex-row h-screen">
+
+            <!-- Cards -->
+
+            <div id="noteList"
+                class="flex flex-col justify-center w-3/5 max-h-screen overflow-y-auto no-scrollbar h-5/6 ">
+
+            </div>
+
+            <!-- Form -->
+            <form id="noteForm"
+                class="w-1/5 h-2/5 m-12  flex flex-row items-center justify-center relative bg-slate-300">
+
+                <div class="w- flex flex-col items-center justify-center ">
+                    <input class="m-2 border-2 border-black p-2 w-full text-center rounded-lg font-bold" type="text"
+                        id="title" placeholder="Title">
+                    <textarea id="content" class="m-2 border-2 border-black p-2 w-full text-center rounded-lg "
+                        cols="30" rows="5">
+                     </textarea>
+                    <button type="submit"
+                        class="border-2 w-4/5 rounded-full p-2 m-2 bg-gray-800 text-white font-bold ">Save
+                    </button>
+                </div>
+
+                <img id="btnCleanForm" class="delete w-10 m-2  absolute right-0 top-0 " src="./img/delete.svg" alt=""
+                    srcset="">
+            </form>
+
+        </div>
+
+
+    </div>
+
+
+    <script src="socket.io/socket.io.js"></script>
+    <script src="script.js" type='module'></script>
+</body>
+
+</html>
